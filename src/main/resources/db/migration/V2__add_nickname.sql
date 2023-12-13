@@ -1,0 +1,1 @@
+ALTER TABLE members ADD COLUMN nickname VARCHAR(255) NOT NULL;

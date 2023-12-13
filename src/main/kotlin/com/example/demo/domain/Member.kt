@@ -8,6 +8,10 @@ class Member (
     @Column(nullable = false)
     var email: String,
 
+    // 컬럼 추가
+    @Column(nullable = false)
+    var nickname: String,
+
     @Enumerated(EnumType.STRING)
     @Column(length = 20, nullable = false)
     var status: MemberStatus,
