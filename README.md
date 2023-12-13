@@ -51,6 +51,23 @@ class Member (
 ) : BaseTimeEntity()
 ```
 
+### 1. 마이그레이션 스크립트(`V1__init.sql`) 작성
+
+`resources/db/migration` 아래에 `V1__init.sql` 파일을 생성하고 DDL 작성
+
+```sql
+CREATE TABLE members
+(
+    member_id BIGINT AUTO_INCREMENT,
+    email     VARCHAR(255)  NOT NULL,
+    status    VARCHAR(20)   NOT NULL,
+    created_at datetime(6)  NOT NULL,
+    updated_at datetime(6)  NOT NULL,
+    PRIMARY KEY (member_id)
+);
+```
+
+
 
 
 
